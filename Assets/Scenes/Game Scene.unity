@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &175584711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175584713}
+  - component: {fileID: 175584712}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &175584712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175584711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e74c93c0c31df4a9d019e540c2d332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &175584713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175584711}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 427.8, y: 21.8, z: 145.738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354736688
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,17 +498,22 @@ PrefabInstance:
     - target: {fileID: -6657539645478508568, guid: 558e2c4c517935d4a80559a294c8489d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -6657539645478508568, guid: 558e2c4c517935d4a80559a294c8489d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.019
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 558e2c4c517935d4a80559a294c8489d,
         type: 3}
       propertyPath: m_Name
       value: Finish Line
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 558e2c4c517935d4a80559a294c8489d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -478,6 +527,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1254943597}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 558e2c4c517935d4a80559a294c8489d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1254943600}
   m_SourcePrefab: {fileID: 100100000, guid: 558e2c4c517935d4a80559a294c8489d, type: 3}
 --- !u!1001 &886910573
 PrefabInstance:
@@ -833,8 +886,20 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 16.280203, y: 4.232908, z: 1}
-  m_Center: {x: -0.16275978, y: 1.6164532, z: -0.00002474896}
+  m_Size: {x: 16.280203, y: 16.510754, z: 1}
+  m_Center: {x: -0.16275978, y: -0.60849607, z: -0.00002474896}
+--- !u!114 &1254943600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254943595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8827081ba49b3fc4d80f26f23b9b6894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1304451424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1187,11 +1252,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 70
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 50
+    m_MinSize: 0
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1225,7 +1290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.18359, y: 246.97046}
+  m_AnchoredPosition: {x: 117, y: 562}
   m_SizeDelta: {x: 332.3672, y: 97.9409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
@@ -1240,3 +1305,4 @@ SceneRoots:
   - {fileID: 1168029082}
   - {fileID: 1189544218}
   - {fileID: 1713768512}
+  - {fileID: 175584713}
